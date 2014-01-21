@@ -128,12 +128,15 @@ SomaGenerator.prototype.styles = function styles() {
 
 SomaGenerator.prototype.scripts = function scripts() {
     this.mkdir('app/scripts');
+    this.mkdir('app/scripts/src');
     this.mkdir('app/scripts/src/commands');
     this.mkdir('app/scripts/src/mediators');
     this.mkdir('app/scripts/src/models');
     this.mkdir('app/scripts/src/views');
-    this.mkdir('app/scripts/src');
+    
     this.write('app/scripts/src/application.js', 'console.log(\'\\\'Allo \\\'Allo!\');');
+
+    this.mkdir('app/scripts/libs');
 };
 
 SomaGenerator.prototype.index = function index() {

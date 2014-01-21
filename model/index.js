@@ -2,7 +2,7 @@
 var util = require('util');
 var yeoman = require('yeoman-generator');
 
-var CommandGenerator = module.exports = function CommandGenerator(args, options, config) {
+var ModelGenerator = module.exports = function ModelGenerator(args, options, config) {
 	// By calling `NamedBase` here, we get the argument to the subgenerator call
 	// as `this.name`.
 	yeoman.generators.NamedBase.apply(this, arguments);
@@ -15,16 +15,16 @@ var CommandGenerator = module.exports = function CommandGenerator(args, options,
 	if (splitted.length > 1) {
 
 		this.packageName = splitted[0].toLowerCase();
-		this.className = this._.capitalize(splitted[1]) + 'Command';
+		this.className = this._.capitalize(splitted[1]) + 'Model';
 	} else {
-		this.className = this._.capitalize(this.name) + 'Command';
+		this.className = this._.capitalize(this.name) + 'Model';
 	}
 
 	console.log('Created command: ' + this.packageName + '.' + this.className);
 };
 
-util.inherits(CommandGenerator, yeoman.generators.NamedBase);
+util.inherits(ModelGenerator, yeoman.generators.NamedBase);
 
-CommandGenerator.prototype.files = function files() {
-	this.template('somefile.js', 'app/scripts/src/commands/' + this.className + '.js');
+ModelGenerator.prototype.files = function files() {
+	this.template('somefile.js', 'app/scripts/src/models/' + this.className + '.js');
 };

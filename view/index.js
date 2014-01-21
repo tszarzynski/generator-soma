@@ -14,8 +14,12 @@ var ViewGenerator = module.exports = function ViewGenerator(args, options, confi
 
 	if (splitted.length > 1) {
 
-		this.packageName = splitted[0];
+		this.packageName = splitted[0].toLowerCase();
 		this.className = this._.capitalize(splitted[1]) + 'View';
+	}
+	else
+	{
+		this.className = this._.capitalize(this.name) + 'View';
 	}
 
 	console.log('Created view: ' + this.packageName + '.' + this.className);
