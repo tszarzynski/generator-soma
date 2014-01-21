@@ -1,0 +1,48 @@
+{
+  "name": "generator-soma",
+  "version": "0.1.0",
+  "description": "A Soma.js generator for Yeoman",
+  "keywords": [
+    "yeoman-generator",
+    "soma",
+    "compass"
+  ],
+  "homepage": "https://github.com/tszarzynski/generator-soma",
+  "bugs": "https://github.com/tszarzynski/generator-soma/issues",
+  "author": {
+    "name": "Tomasz Szarzynski",
+    "email": "tszarzynski@gmail.com",
+    "url": "https://github.com/tszarzynski"
+  },
+  "main": "app/index.js",
+  "files": [
+    "app"
+  ],
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=1.2.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tszarzynski/generator-soma.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "dependencies": {
+    "yeoman-generator": "~0.14.0",
+    "cheerio": "~0.13.0",
+    "chalk": "~0.4.0"
+  },
+  "devDependencies": {
+    "mocha": "~1.14.0"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  },
+  "licenses": [
+    {
+      "type": "MIT"
+    }
+  ]
+}

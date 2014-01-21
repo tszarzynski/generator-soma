@@ -1,0 +1,15 @@
+{
+  "name": "<%= _.slugify(appname) %>",
+  "version": "0.1.0",
+  "dependencies": {
+  	"soma.js": "latest",
+  	"soma-template": "latest",
+  	"soma-events": "latest",<% if (includeModernizr) { %>
+    "modernizr": "latest",<% } if (includeDirector) { %>
+    "director": "latest",<% } %>
+  	"breakpoint-sass": "latest"
+  }
+}
+
+
+

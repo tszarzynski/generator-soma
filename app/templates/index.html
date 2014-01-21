@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7 no-mqs"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8 no-mqs"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9 no-mqs"> <![endif]-->
+<!--[if IE 9]>    <html class="lt-ie10 no-ie mqs" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-ie mqs" lang="en"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+    <title><%= _.capitalize(applicationName) %></title>
+    <meta name="description" content="">  
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0, user-scalable=no">  
+    <meta name="apple-mobile-web-app-capable" content="yes" />  
+
+    <!-- build:css(.tmp) styles/application.css -->  
+    <link rel="stylesheet" href="styles/application.css">  
+    <!-- endbuild -->  
+    <% if (includeModernizr) { %>  
+    <script src="bower_components/modernizr/modernizr.js"></script>
+    <% } %>
+</head>
+<body>
+    <!-- build:js scripts/vendor.js -->  
+    <!-- bower:js -->  
+    <!-- endbower -->  
+    <!-- endbuild -->  
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->  
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
+  </body>
+</html>
